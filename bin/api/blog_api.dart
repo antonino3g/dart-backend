@@ -1,12 +1,12 @@
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
 
-class ServeHandler {
+class BlogApi {
   Handler get handler {
-    final router = Router();
+    Router router = Router();
 
-    router.get('/', (Request request) {
-      return Response(200, body: 'Primeira Rora');
+    router.get('/blog/noticias', (Request req) {
+      return Response.ok('Choveu hoje =(');
     });
 
     return router;
